@@ -1,0 +1,38 @@
+### PING
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@gmail.com",
+  "password": "Test1234"
+}
+
+### LOGIN
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "johndoe@gmail.com",
+  "password": "Test1234"
+}
+
+### GET ALL USERS
+GET http://localhost:3000/users
+
+### GET USER FROM TOKEN
+GET http://localhost:3000/user/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwiX2lkIjoiNjc0Yzc3OTUxODdjNjkzMDUwOGEwYWI0IiwiaWF0IjoxNzMzMjMxNjY5LCJleHAiOjE3MzM0OTA4Njl9.ZVnq3dlg9oJhgFosJQLKcxMP75ybcpPQ3UFXNdR_Szw
+
+### REQUEST PASSWORD RESET
+GET http://localhost:3000/password/johndoe@gmail.com
+
+### RESET PASSWORD
+POST http://localhost:3000/password
+Content-Type: application/json
+
+{
+  "email": "johndoe@gmail.com",
+  "password": "Test1234",
+  "resetPasswordToken": 1469507
+}
